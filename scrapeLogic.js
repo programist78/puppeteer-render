@@ -23,21 +23,6 @@ const scrapeLogic = async (res) => {
     // Устанавливаем размеры экрана
     await page.setViewport({ width: 1080, height: 1024 });
 
-    // Вводим текст в строку поиска
-    // await page.type(".search-box__input", "automate beyond recorder");
-
-    // // Ждем и кликаем на первый результат
-    // const searchResultSelector = ".search-box__link";
-    // await page.waitForSelector(searchResultSelector);
-    // await page.click(searchResultSelector);
-
-    // // Ожидаем заголовок страницы
-    // const textSelector = await page.waitForSelector("text/Customize and automate");
-    // const fullTitle = await textSelector.evaluate((el) => el.textContent);
-
-    // console.log(`The title of this blog post is ${fullTitle}`);
-
-    // Создаем папку для скриншотов, если её нет
     if (!fs.existsSync("screenshots")) {
       fs.mkdirSync("screenshots");
     }
